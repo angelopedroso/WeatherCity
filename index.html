@@ -6,25 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clima</title>
     <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/form-search.css" />
+    <link rel="stylesheet" href="styles/card__result.css" />
 
     <script defer src="script.js"></script>
   </head>
   <body>
-    <form>
-      <input type="text" name="cidade" id="input__city" placeholder="Cidade" />
-      <button type="submit">Pesquisar</button>
-    </form>
-
-    <div class="result">
-      <span id="field__city">Torres</span>
-      <span id="state_country">Rio Grande do Sul, Brasil</span>
-      <div class="temp-container">
-        <span id="field__temp">32</span>
-        <p>ºC</p>
+    <main>
+      <div class="form-search">
+        <form>
+          <input
+            type="text"
+            name="cidade"
+            id="input__city"
+            placeholder="Cidade"
+          />
+          <button type="submit">Pesquisar</button>
+        </form>
       </div>
 
-      <span>IMG</span>
-      <span>desc</span>
-    </div>
+      <div class="card__result">
+        <span id="field__city">Torres</span>
+        <span id="state_country">Rio Grande do Sul, Brasil</span>
+        <div class="temp-container">
+          <span id="field__temp">32</span>
+          <p>ºC</p>
+        </div>
+
+        <img src="" alt="" />
+        <span id="field__desc">desc</span>
+      </div>
+    </main>
   </body>
 </html>
