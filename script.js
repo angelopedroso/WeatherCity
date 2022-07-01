@@ -11,6 +11,8 @@ const handleSubmit = (event) => {
   event.preventDefault();
   const city = input.value;
 
+  if (city === "") return;
+
   fetch(`https://api.weatherapi.com/v1/current.json?key=${key}&q=${city}&aqi=no
     `)
     .then((response) => response.json())
@@ -20,6 +22,9 @@ const handleSubmit = (event) => {
       temp.innerHTML = data.current.temp_c;
       weather.src = data.current.condition.icon;
       desc.innerHTML = data.current.condition.text;
+    })
+    .catch((error) => {
+      console.log(error);
     });
 };
 
